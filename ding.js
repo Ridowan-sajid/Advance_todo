@@ -5,7 +5,7 @@ const list2=document.querySelector('.show-done');
 const dlt=document.querySelectorAll('.dlt');
 const search=document.querySelector('.search');
 const form2=document.forms['form1'];
-const allList=document.querySelectorAll('.li');
+let allList=document.querySelectorAll('.li');
 
 
 //add
@@ -84,6 +84,8 @@ list.addEventListener('click',(e)=>{
 //search
 
 form2.addEventListener('keyup',(e)=>{
+ allList=document.querySelectorAll('.li');
+ 
    allList.forEach((a)=>{
     if(a.firstChild.nextSibling.textContent.toLowerCase().includes(search.value.toLowerCase())){
       // const styleDisplay=getComputedStyle(a).display.toString();
